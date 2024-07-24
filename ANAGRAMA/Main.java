@@ -9,6 +9,8 @@ import java.util.Scanner;
  * las letras de otra palabra inicial.
  * - NO hace falta comprobar que ambas palabras existan.
  * - Dos palabras exactamente iguales no son anagrama.
+ * 
+ * @author Juan Vázquez
  */
 
 public class Main {
@@ -24,6 +26,23 @@ public class Main {
         System.out.println("Dime la segunda palabra");
         String palabra2 = sc.nextLine();
 
-        System.out.println(palabra1 + " " + palabra2);
+        int valorPalabra1 = 0;
+        char[] letrasPalabra1 = palabra1.toCharArray();
+        for (int i = 0; i < letrasPalabra1.length; i++) {
+            valorPalabra1 = valorPalabra1 + (int) letrasPalabra1[i];
+        }
+        int valorPalabra2 = 0;
+        char[] letrasPalabra2 = palabra2.toCharArray();
+        for (int i = 0; i < letrasPalabra2.length; i++) {
+            valorPalabra2 = valorPalabra2 + (int) letrasPalabra2[i];
+        }
+
+        if (valorPalabra1 == valorPalabra2 && !palabra1.equals(palabra2)) {
+            System.out.println(palabra1 + " es un anagrama de " + palabra2);
+        } else {
+            System.out.println(palabra1 + " NO es un anagrama de " + palabra2);
+        }
+
+        sc.close();
     }
 }
