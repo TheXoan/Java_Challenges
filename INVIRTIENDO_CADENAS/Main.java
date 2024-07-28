@@ -3,6 +3,14 @@ package INVIRTIENDO_CADENAS;
 import java.util.Scanner;
 import java.util.Stack;
 
+/**
+ * Crea un programa que invierta el orden de una cadena de texto
+ * sin usar funciones propias del lenguaje que lo hagan de forma automática.
+ * - Si le pasamos "Hola mundo" nos retornaría "odnum aloH"
+ * 
+ * @author Juan Vázquez
+ */
+
 public class Main {
     public static void main(String[] args) {
 
